@@ -2,6 +2,7 @@
   
   <div class="ui card">
     <h1>{{title.toUpperCase()}}</h1>
+    <h3>Members List:</h3>
     <ul class="list">
       <li *ngFor="let member of members">{{member}}</li>
     </ul>
@@ -15,6 +16,8 @@
       [value]="newMemberName"
       />
       <button (click)="addMember()">Add</button>
+      <button (click)="removeMember()">Remove all Members</button>
+      
     </div>
     
     <div class="input-container">

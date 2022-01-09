@@ -20,7 +20,14 @@ export class AppComponent {
     } else {
       this.errorMessage = "Name can't be empty"
     }
+  }
 
+  removeMember() {
+    if (this.members.length > 0) {
+      this.members = [];
+    } else if (this.members.length === 0) {
+      this.errorMessage = "Members list is already empty"
+    }
   }
 
   onInput(member: string) {
